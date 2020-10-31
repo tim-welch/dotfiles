@@ -17,3 +17,20 @@ Clone a bare repo of this repository and create $HOME as a worktree of it:
 
 You should now be able to use git to add your dotfiles and then push them to your remote repo.
 
+## Technical
+
+### Fedora 32
+#### Monitors
+
+Fedora did not detect my second screen correctly. It assumed 1024x768 as max resolution. I found
+https://unix.stackexchange.com/questions/292714/bad-resolution-on-second-monitor-fedora-24 and
+followed the instructions to fix the resolution of my second screen.
+
+1. To list the monitors execute `xrandr -q`. This will tell you if you are using Wayland or xorg.
+2. By default Fedora 32 uses Wayland. To make dual monitors work with proper resolution, I had to
+uncomment the line `WaylandEnable=false` in `/etc/gdm/custom.conf` and restart the computer.
+3. Get a new modeline `cvt 1920 1080`
+4. Create the new mode `xrandr --newmode "1920x1080_60.00" 173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync`
+5. Add the new mode to the second display `xrandr --addmode DP-2 "1920x1080_60.00"`
+
+
