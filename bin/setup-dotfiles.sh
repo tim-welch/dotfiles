@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#! /usr/bin/bash -e
 
 git clone --bare git@github.com:tim-welch/dotfiles.git $HOME/dotfiles
 git --git-dir=$HOME/dotfiles worktree add -f $HOME/home master
