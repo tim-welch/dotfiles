@@ -2,12 +2,13 @@
 
 This repository contains my configuration files (dotfiles) for Linux and the applications I use on Linux.
 
-# Install and configure
+## Getting started
+### Install and configure
 
 Clone a bare repo of this repository and create $HOME as a worktree of it:
 `curl https://raw.githubusercontent.com/tim-welch/dotfiles/master/bin/setup-dotfiles.sh | sh`
 
-# Create your own bare repo dotfiles repository
+### Create your own bare repo dotfiles repository
 
 1. Create a bare repo in github, gitlab, bitbucket, or whereever you want to keep your repository.
 2. Copy my bin/setup-dotfiles.sh script to your computer `curl -o $HOME/bin/setup-dotfiles.sh https://raw.githubusercontent.com/tim-welch/dotfiles/master/bin/setup-dotfiles.sh`
