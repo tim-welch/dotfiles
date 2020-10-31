@@ -20,5 +20,6 @@ sudo dnf install -y xorg-x11-server-Xorg
 sudo dnf copr -y enable yaroslav/i3desktop
 sudo dnf copr -y enable vladius/i3blocks
 sudo dnf install -y i3 i3lock i3status dmenu rofi i3blocks compton
+echo "exec i3" > ~/.xinitrc
 
 
