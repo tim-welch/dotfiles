@@ -33,6 +33,8 @@ uncomment the line `WaylandEnable=false` in `/etc/gdm/custom.conf` and restart t
 4. Create the new mode `xrandr --newmode "1920x1080_60.00" 173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync`
 5. Add the new mode to the second display `xrandr --addmode DP-2 "1920x1080_60.00"`
 
+I created a script `~/bin/fixup-screen.sh` since it doesn't seem to persist.
+
 #### Boot to text-based login prompt
 
 `sudo systemctl set-default multi-user.target`
