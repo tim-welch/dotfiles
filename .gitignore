@@ -1,3 +1,4 @@
 dotfiles/
-.ssh
 src/
+.ssh
+.swp
