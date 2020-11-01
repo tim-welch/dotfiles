@@ -15,15 +15,16 @@ sudo update-desktop-database
 sudo mkdir -p /usr/local/share/man/man1
 gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
 
-mkdir -p ${ZDOTDIR:-~}/.zsh_functions
-if ! grep -q "fpath+=${ZDOTDIR:-~}/.zsh_functions$" ${ZDOTDIR:-~}/.zshrc; then
-  echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
+mkdir -p ${ZDOTDIR}/.zsh_functions
+cp extra/completions/_alacritty ${ZDOTDIR}/.zsh_functions/_alacritty
+if ! grep -q 'fpath+=${ZDOTDIR}/.zsh_functions$' ${ZDOTDIR}/.zshrc; then
+  echo 'fpath+=${ZDOTDIR}/.zsh_functions' >> ${ZDOTDIR}/.zshrc
 fi
 
 mkdir -p ~/.bash_completion
 cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
-if ! grep -q "source ~/.bash_completion/alacritty$" ~/.bashrc; then
-  echo "source ~/.bash_completion/alacritty" >> ~/.bashrc
+if ! grep -q 'source ~/.bash_completion/alacritty$' ~/.bashrc; then
+  echo 'source ~/.bash_completion/alacritty' >> ~/.bashrc
 fi
 
 
