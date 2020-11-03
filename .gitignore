@@ -1,6 +1,7 @@
 dotfiles/
 src/
 .ssh/
+.cache/
 *.swp
 .config/zsh/.zsh_functions/
 .bash_completion/
