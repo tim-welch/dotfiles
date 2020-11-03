@@ -4,16 +4,16 @@
 
 # Install system tools and utilities
 sudo dnf install -y 'dnf-command(versionlock)'
-sudo dnf install -y vim util-linux-user wget curl tar gzip
+sudo dnf install -y vim vim-X11 util-linux-user wget curl tar gzip
 
 # Install zsh
 sudo dnf install -y zsh
 ZDOTDIR=$HOME/.config/zsh
 mkdir -p $ZDOTDIR
-if ! grep -q "export ZDOTDIR=$ZDOTDIR" ${ZDOTDIR:-~}/.zshenv; then
+if ! grep -q "export ZDOTDIR" ${ZDOTDIR:-~}/.zshenv; then
   echo "export ZDOTDIR=$ZDOTDIR" >> ${ZDOTDIR:-~}/.zshenv
 fi
-if ! grep -q "export ZDOTDIR=$ZDOTDIR" ~/.bashrc; then
+if ! grep -q "export ZDOTDIR" ~/.bashrc; then
   echo "export ZDOTDIR=$ZDOTDIR" >> ~/.bashrc
 fi
 
@@ -33,5 +33,8 @@ sudo dnf copr -y enable vladius/i3blocks
 sudo dnf install -y i3 i3lock i3status dmenu rofi i3blocks compton
 echo "exec i3" > ~/.xinitrc
 
-# Install alacritty dependencies
+# Install terminals
+sudo dnf install -y terminology terminator rxvt-unicode xterm xfce4-terminal st kitty
+
 sudo dnf install -y rust cargo freetype-devel fontconfig-devel libxcb-devel
+[ TERM="alacritty" ] ||  update-alacritty.sh
