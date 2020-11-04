@@ -4,7 +4,7 @@
 
 # Install system tools and utilities
 sudo dnf install -y 'dnf-command(versionlock)'
-sudo dnf install -y vim vim-X11 util-linux-user wget curl tar gzip
+sudo dnf install -y vim vim-X11 neovim util-linux-user wget curl tar gzip
 
 # Install zsh
 sudo dnf install -y zsh
