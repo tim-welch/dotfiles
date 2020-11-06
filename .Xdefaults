@@ -36,9 +36,24 @@
 ! Font configuration
 ! -----------------------------------------------------------------------------
 
-!URxvt.font: xft:Meslo LG L DZ Regular Nerd Font Complete:pixelsize=12:antialias=true:hinting=true:medium
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
-!Xft.rgba: none
+XTerm*renderFont: true
+!XTerm*faceName: xft:DejaVu Sans Mono, \
+!            xft:agave regular Nerd Font Complete:size=12, \
+!            xft:NotoColorEmoji:size=12
+
+XTerm*faceName: xft:mononoki-Regular Nerd Font Complete
+!            xft:agave regular Nerd Font Complete:size=12, \
+!            xft:NotoColorEmoji:size=12
+
+
+ 
+!URxvt*font: xft:DejaVu Sans Mono:pixelsize=12, \
+!            xft:agave regular Nerd Font Complete:pixelsize=12, \
+!            xft:NotoColorEmoji:pixelsize=12
+
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+
+Xft.rgba: rgb
 !Xft.hintstyle: hintslight
 !URxvt.letterSpace: -2
 Xft*dpi: 96
