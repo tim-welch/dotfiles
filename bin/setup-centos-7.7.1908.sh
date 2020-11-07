@@ -10,6 +10,9 @@ sudo yum install -y libX11-devel libXft-devel freetype-devel glib2-devel cairo-d
 # Use update-cmake.sh instead
 # sudo yum install -y cmake # neovim
 
+# Install newer gcc toolset
+sudo yum install -y centos-release-scl
+sudo yum install -y devtoolset-9
 
 # Install i3 window manager
 sudo yum --enablerepo=extras install -y epel-release

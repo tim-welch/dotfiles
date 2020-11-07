@@ -1,5 +1,8 @@
 #! /bin/bash -e
 
+# Run the following before this script:
+# scl enable devtoolset-9 bash
+
 # Create ~/src to hold git repos for builds
 mkdir -p ~/src
 
@@ -8,12 +11,14 @@ mkdir -p ~/src
 cd ~/src/harfbuzz
 git pull
 meson build
-# Disable building harfbuzz until I have a C99 compatible compiler
-#meson compile -C build
+meson compile -C build
 
 # Build and install suckless terminal (st)
-[[ -d ~/src/st ]] || git clone https://git.suckless.org/st ~/src/st
+[[ -d ~/src/st ]] || git clone https://github.com/tim-welch/st ~/src/st
 cd ~/src/st
+git pull
+[[ -f config.h ]] && rm config.h
+make PREFIX=~/.local uninstall
 make PREFIX=~/.local clean install
 #make PREFIX=~/.local STCFLAGS="-I. -I/usr/include/freetype2" clean install
 

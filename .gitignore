@@ -19,6 +19,7 @@ src/
 .bash_profile
 .serverauth.*
 .Xauthority
+.terminfo
 
 # Configs I don't care about
 .config/BraveSoftware/
