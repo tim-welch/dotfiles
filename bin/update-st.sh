@@ -3,19 +3,19 @@
 # Run the following before this script:
 # scl enable devtoolset-9 bash
 
-# Create ~/src to hold git repos for builds
-mkdir -p ~/src
+SRC=~/.local/src
+mkdir -p $SRC
 
 # Build and install HarfBuzz
-[[ -d ~/src/harfbuzz ]] || git clone https://github.com/harfbuzz/harfbuzz.git ~/src/harfbuzz
-cd ~/src/harfbuzz
+[[ -d $SRC/harfbuzz ]] || git clone https://github.com/harfbuzz/harfbuzz.git $SRC/harfbuzz
+cd $SRC/harfbuzz
 git pull
 meson build
 meson compile -C build
 
 # Build and install suckless terminal (st)
-[[ -d ~/src/st ]] || git clone https://github.com/tim-welch/st ~/src/st
-cd ~/src/st
+[[ -d $SRC/st ]] || git clone https://github.com/tim-welch/st $SRC/st
+cd $SRC/st
 git pull
 [[ -f config.h ]] && rm config.h
 make PREFIX=~/.local uninstall

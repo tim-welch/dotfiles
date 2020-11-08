@@ -2,9 +2,11 @@
 
 # NOTE: This script must be run when no alacritty terminals are open
 
-mkdir -p ~/src
-[[ -d ~/src/alacritty ]] || git clone https://github.com/alacritty/alacritty.git ~/src/alacritty
-cd ~/src/alacritty
+SRC=~/.local/src
+mkdir -p $SRC
+
+[[ -d $SRC/alacritty ]] || git clone https://github.com/alacritty/alacritty.git $SRC/alacritty
+cd $SRC/alacritty
 git pull
 cargo build --release
 sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
