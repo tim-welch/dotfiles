@@ -3,8 +3,12 @@
 # Install gcc, git, etc.
 sudo yum group install -y "Development Tools"
 sudo yum install -y openssl openssl-devel libcurl-devel expat-devel asciidoc xmlto # git
-sudo yum install -y libX11-devel libXft-devel freetype-devel glib2-devel cairo-devel meson pkgconfig gtk-doc graphite2 graphite2-devel libicu libicu-devel # st
 
+# Install GNOME Desktop to get terminator
+sudo yum group install -y "GNOME Desktop"
+sudo yum install -y terminator
+
+# sudo yum install -y libX11-devel libXft-devel freetype-devel glib2-devel cairo-devel meson pkgconfig gtk-doc graphite2 graphite2-devel libicu libicu-devel # st
 #sudo yum install -y gtk3 gtk3-devel gtk-doc # termite
 
 # Use update-cmake.sh instead
