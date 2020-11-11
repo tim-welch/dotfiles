@@ -34,7 +34,5 @@ sudo dnf install -y i3 i3lock i3status dmenu rofi i3blocks compton
 echo "exec i3" > ~/.xinitrc
 
 # Install terminals
-sudo dnf install -y terminology terminator rxvt-unicode xterm xfce4-terminal st kitty
+sudo dnf install -y terminator
 
-sudo dnf install -y rust cargo freetype-devel fontconfig-devel libxcb-devel
-[ TERM="alacritty" ] ||  update-alacritty.sh
