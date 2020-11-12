@@ -5,18 +5,8 @@ This repository contains my configuration files (dotfiles) for Linux and the app
 ## Getting started
 
 ### Dependencies
-To install the dotfiles, you will need some version of git.
-
-### Install and configure
-
-Clone a bare repo of this repository and create $HOME as a worktree of it:
-```
-git clone --bare git@github.com:tim-welch/dotfiles.git $HOME/dotfiles
-git --git-dir=$HOME/dotfiles worktree add -f $HOME/home master
-mv $HOME/home/.git $HOME
-rm -rf $HOME/home
-git --git-dir=$HOME/dotfiles --work-tree=$HOME checkout
-```
+* To install the dotfiles, you will need a version of git that supports worktrees.
+* Use my setup-linux repo on github to install the applications.
 
 ### Create your own bare repo dotfiles repository
 
