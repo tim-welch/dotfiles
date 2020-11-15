@@ -17,7 +17,6 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export ALIAS_USER_DIR="$XDG_CONFIG_HOME"/aliases
 export ALIAS_USER_LOCAL_DIR="$HOME"/.local/aliases
-export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
 mkdir -p "$XDG_DATA_HOME"/vim/undo
 mkdir -p "$XDG_DATA_HOME"/vim/swap
 mkdir -p "$XDG_DATA_HOME"/vim/backup
@@ -33,6 +32,8 @@ HISTCONTROL=ignoreboth # don't save duplicates or commands starting with space
 
 # Default applications
 export EDITOR=nvim
+export GIT_EDITOR=$EDITOR
+export VISUAL=$EDITOR
 export TERMINAL=terminator
 export BROWSER=brave-browser
 

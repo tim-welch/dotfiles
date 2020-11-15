@@ -1,0 +1,39 @@
+alias sb='source ~/.bashrc'
+
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	test -r ~/.dir_colors && eval `dircolors ~/.dir_colors/dircolors`
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
+	alias zgrep='zgrep --color=auto'
+fi
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+alias tmux='TERM=xterm-256color tmux'
+
+alias e=$EDITOR
+alias v=$EDITOR
+alias vi=$EDITOR
+alias nvim=nvim
+
+alias ls='ls --color=auto -h'
+alias ll='ls --color=auto -alFh'
+alias la='ls --color=auto -Ah'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# git aliases
+git config --global alias.lol "log --oneline"
+git config --global alias.realclean "clean -xfd --exclude=.vagrant"
+git config --global alias.co checkout
+git config --global alias.get "fetch --prune"
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias.root "rev-parse --show-toplevel"
+git config --global alias.bn "rev-parse --abbrev-ref HEAD"
+git config --global alias.publish "push -u origin $(git bn)"
+git config --global alias.unstage "reset HEAD"
+git config --global alias.diffs "diff --staged"
+
