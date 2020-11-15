@@ -45,5 +45,6 @@ Downloads/
 .config/user-dirs.locale
 .config/yelp/
 .config/libvirt/
+.config/htop/
 .mozilla/
 .pki/
