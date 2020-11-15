@@ -3,10 +3,10 @@
 This repository contains my configuration files (dotfiles) for Linux and the applications I use on Linux.
 
 ## Getting started
-### Install and configure
 
-Clone a bare repo of this repository and create $HOME as a worktree of it:
-`curl https://raw.githubusercontent.com/tim-welch/dotfiles/master/bin/setup-dotfiles.sh | sh`
+### Dependencies
+* To install the dotfiles, you will need a version of git that supports worktrees.
+* Use my setup-linux repo on github to install the applications.
 
 ### Create your own bare repo dotfiles repository
 
