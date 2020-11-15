@@ -1,8 +1,9 @@
 # Home directory git repo
 dotfiles/
 
-# Git repos
+# Source repos
 src/
+.subversion/
 
 # Privacy
 .gitconfig
