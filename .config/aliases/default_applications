@@ -1,0 +1,5 @@
+alias v=$EDITOR
+alias vi=$EDITOR
+alias vim=vim
+alias nvim=nvim
+

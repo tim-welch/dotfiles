@@ -1,52 +1,25 @@
+# Order of initialization:
+# - Interactive login shell (ssh or local login):
+# -- /etc/profile
+# -- Then, first of: ~/.bash_profile, ~/.bash_login, ~/.profile
+# - Interactive non-login shell (new shell):
+# -- ~/.bashrc
+# - Non-interactive shell (e.g. to run a shell script)
+# -- Source the file in $BASH_ENV
+
+
 # Quit if not interactive
 [[ $- != *i* ]] && return
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
-# XDG Base Directories
-export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
-export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
-
-# Clean home directory
-mkdir -p "$XDG_DATA_HOME"/vim/undo
-mkdir -p "$XDG_DATA_HOME"/vim/swap
-mkdir -p "$XDG_DATA_HOME"/vim/backup
-mkdir -p "$XDG_DATA_HOME"/vim/view
-mkdir -p "$XDG_DATA_HOME"/bash
-mkdir -p "$XDG_DATA_HOME"/bash/completions
-export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
-export HISTFILE="$XDG_DATA_HOME"/bash/history
-export BASH_COMPLETION_USER_DIR="$XDG_DATA_HOME"/bash/completions
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
-#export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
-export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
-
-# History
-HISTSIZE=1000
-SAVEHIST=1000
-
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+# Enable vi mode
+set -o vi
+
 # Completions
 for f in "$BASH_COMPLETION_USER_DIR"/*; do source "$f"; done
 
-# Configure editor
-alias vi=vim
-alias vim=vim
-export EDITOR=vim
-
-
-[ -f ~/.config/bash/.fzf.bash ] && source ~/.config/bash/.fzf.bash
+# Aliases
+for f in "$ALIAS_USER_DIR"/*; do source "$f"; done
+for f in "$ALIAS_USER_LOCAL_DIR"/*; do source "$f"; done
