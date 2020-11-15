@@ -44,7 +44,9 @@ export PATH
 for f in "$BASH_COMPLETION_USER_DIR"/*; do source "$f"; done
 
 # Configure editor
-alias vi=nvim
-alias vim=nvim
-export EDITOR=nvim
+alias vi=vim
+alias vim=vim
+export EDITOR=vim
 
+
+[ -f ~/.config/bash/.fzf.bash ] && source ~/.config/bash/.fzf.bash
