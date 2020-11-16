@@ -3,7 +3,7 @@
 ## Bash
 ### vi mode
 <details>
-<summary>Press <esc> to enter vi mode</summary>
+<summary>Press escape to enter vi mode</summary>
   The command line defaults to insert mode. The following keys can be used to edit the command.
   
   - `<esc>` - enter normal mode
