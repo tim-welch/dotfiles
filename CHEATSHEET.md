@@ -1,7 +1,18 @@
 # Cheatsheet
 
 ## Bash
-### Fuzzy completion
+### vi mode
+<details>
+<summary>Press <esc> to enter vi mode</summary>
+  The command line defaults to insert mode. The following keys can be used to edit the command.
+  
+  - `<esc>` - enter normal mode
+  - `h,j,k,l` - movement keys
+  - `a,i,A,I` - reenter insert mode
+  - `v` - bring up the current command line in vim for editing; command is executed upon exiting vim
+</details>
+
+### fuzzy completion
 <details>
 <summary>I use [`fzf`](https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh) for fuzzy completion.</summary>
 
