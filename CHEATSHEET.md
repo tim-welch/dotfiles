@@ -2,8 +2,9 @@
 
 ## Bash
 <details>
-<summary>### Fuzzy completion</summary>
-I use [`fzf`](https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh) for fuzzy completion.
+### Fuzzy completion
+<summary>I use [`fzf`](https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh) for fuzzy completion.</summary>
+
 #### Files and directories
 
 Use `**<tab>` to bring up a list of files and directories to select from:
