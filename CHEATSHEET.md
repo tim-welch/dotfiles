@@ -1,15 +1,28 @@
 # Cheatsheet
 
 ## Bash
+### search history
+<details>
+<summary>ctrl-r to search history</summary>
+As normal for bash `<ctrl>-r` is used to search history. Mine is configured as a fuzzy search.
+</details>
+
 ### vi mode
 <details>
 <summary>Press escape to enter vi mode</summary>
-  The command line defaults to insert mode. The following keys can be used to edit the command.
+  The command line defaults to insert mode. In insert mode, the cursor is a vertical line which changes to a solid box in command mode.
+
+  The following keys can be used to edit the command:
   
   - `<esc>` - enter normal mode
-  - `h,j,k,l` - movement keys
   - `a,i,A,I` - reenter insert mode
+  - `h,j,k,l` - movement keys
+  - `b,w,e` - move between words
+  - `^,$` - move to start and end of line
+  - `d,y,p` - delete, yank, paste
   - `v` - bring up the current command line in vim for editing; command is executed upon exiting vim
+
+  
 </details>
 
 ### fuzzy completion
