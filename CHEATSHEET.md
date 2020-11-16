@@ -1,8 +1,8 @@
 # Cheatsheet
 
 ## Bash
-<details>
 ### Fuzzy completion
+<details>
 <summary>I use [`fzf`](https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh) for fuzzy completion.</summary>
 
 #### Files and directories
