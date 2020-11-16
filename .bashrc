@@ -26,10 +26,6 @@ shopt -s histverify   # Don't automattically execute history substitution
 shopt -s nocaseglob   # Ignore case when performing pathname expansion
 shopt -s progcomp_alias # Allow programmable completion through aliases
 
-# Completions
-#[ -f /usr/share/bash-completion/bash-completion ] && source /usr/share/bash-completion/bash-completion
-for f in "$BASH_COMPLETION_USER_DIR"/*; do source "$f"; done
-
 # Aliases
 for f in "$ALIAS_USER_DIR"/*; do source "$f"; done
 for f in "$ALIAS_USER_LOCAL_DIR"/*; do source "$f"; done

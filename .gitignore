@@ -15,9 +15,6 @@ src/
 *.swp
 .bash_completion/
 .config/zsh/.zsh_functions/
-.bash_history
-.bash_logout
-.bash_profile
 .serverauth.*
 .Xauthority
 .terminfo
