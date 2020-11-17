@@ -23,3 +23,11 @@ nnoremap <S-TAB> :bprevious<CR>
 " Better indent shifting
 vnoremap < <gv
 vnoremap > >gv
+
+" Manage todo lists
+nnoremap <F9> :e ~/todo/todo.md<CR>
+nnoremap <S-F9> :call win_gotoid(bufwinid('todo.md'))<CR>
+nnoremap <C-F9> :Files ~/todo/<CR>
+nnoremap <M-F9> :e ~/todo/<CR>
+
+nnoremap <F12> :e $MYVIMRC<CR>

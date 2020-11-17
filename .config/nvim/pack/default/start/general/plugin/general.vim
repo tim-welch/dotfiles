@@ -1,5 +1,6 @@
 " General settings
-autocmd! BufWritePost $MYVIMRC source %  " Automatically source vimrc when it is saved
+autocmd! BufWritePost ~/.config/nvim/* source %  " Automatically source vimrc when it is saved
+autocmd! BufWritePost ~/.vim/* source %  " Automatically source vimrc when it is saved
 syntax enable                            " Enable syntax highlighting
 "set term=xterm                           " Required for mouse when running vim in alacritty
 set mouse=a                              " Enable the mouse
