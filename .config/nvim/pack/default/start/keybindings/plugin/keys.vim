@@ -83,3 +83,6 @@ nnoremap <F12> :e $MYVIMRC<CR>
 nnoremap <S-F12> :Files ~/.vim<CR>
 nnoremap <C-F12> :Files ~/.config/nvim<CR>
 nnoremap <M-F12> :e ~/.config/nvim/<CR>
+
+" Git
+nnoremap gs :Gstatus<CR>
