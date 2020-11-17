@@ -1,6 +1,17 @@
 " Key maps
 " backup
-let g:mapleader = "\<Space>"        " Set leader key to space bar
+let g:mapleader = " "        " Set leader key to space bar
+
+" Disable arrow keys to force use of vim keys for navigation
+noremap <Down> <Nop>
+noremap <Up> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Down> <Nop>
+inoremap <Up> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
 
 " Copy and paste like a terminal
 map <silent> <S-Insert> "*p
@@ -30,4 +41,9 @@ nnoremap <S-F9> :call win_gotoid(bufwinid('todo.md'))<CR>
 nnoremap <C-F9> :Files ~/todo/<CR>
 nnoremap <M-F9> :e ~/todo/<CR>
 
+" Manage my vim configuration
 nnoremap <F12> :e $MYVIMRC<CR>
+
+" clang-format
+map <C-A> :pyf ~/.local/share/clang/clang-format.py<cr>
+imap <C-A> <c-o>:pyf ~/.local/share/clang/clang-format.py<cr>
