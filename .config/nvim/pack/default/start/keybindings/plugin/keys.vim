@@ -35,6 +35,43 @@ nnoremap <S-TAB> :bprevious<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" clang-format
+map <C-A> :pyf ~/.local/share/clang/clang-format.py<cr>
+imap <C-A> <c-o>:pyf ~/.local/share/clang/clang-format.py<cr>
+
+" Open files in current window
+nnoremap <silent> <Leader>e :Files<cr>
+nnoremap <silent> <C-p> :Files<cr>
+
+" Open files in horizontal split
+nnoremap <silent> <Leader>w :call fzf#run({
+\   'down': '40%',
+\   'sink': 'botright split' })<CR>
+
+" Open files in vertical horizontal split
+nnoremap <silent> <Leader>v :call fzf#run({
+\   'right': winwidth('.') / 2,
+\   'sink':  'vertical botright split' })<CR>
+
+" List open buffers
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
+"
 " Manage todo lists
 nnoremap <F9> :e ~/todo/todo.md<CR>
 nnoremap <S-F9> :call win_gotoid(bufwinid('todo.md'))<CR>
@@ -43,7 +80,6 @@ nnoremap <M-F9> :e ~/todo/<CR>
 
 " Manage my vim configuration
 nnoremap <F12> :e $MYVIMRC<CR>
-
-" clang-format
-map <C-A> :pyf ~/.local/share/clang/clang-format.py<cr>
-imap <C-A> <c-o>:pyf ~/.local/share/clang/clang-format.py<cr>
+nnoremap <S-F12> :Files ~/.vim<CR>
+nnoremap <C-F12> :Files ~/.config/nvim<CR>
+nnoremap <M-F12> :e ~/.config/nvim/<CR>
