@@ -13,3 +13,9 @@
 [submodule ".config/nvim/pack/default/start/vim-commentary"]
 	path = .config/nvim/pack/default/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule ".config/nvim/pack/default/start/vimwiki"]
+	path = .config/nvim/pack/default/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki
+[submodule ".config/nvim/pack/default/start/vim-table-mode"]
+	path = .config/nvim/pack/default/start/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode
