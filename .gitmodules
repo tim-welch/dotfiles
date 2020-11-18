@@ -18,4 +18,4 @@
 	url = https://github.com/vimwiki/vimwiki
 [submodule ".config/nvim/pack/default/start/vim-table-mode"]
 	path = .config/nvim/pack/default/start/vim-table-mode
-	url = https://github.com/dhruvasagar/vim-table-mode
+	url = https://github.com/tim-welch/vim-table-mode
