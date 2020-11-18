@@ -52,6 +52,11 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# key mappings for applications
+bindsym $mod+t exec brave-browser https://todoist.com/app
+bindsym $mod+w exec brave-browser --new-window
+bindsym $mod+e exec brave-browser https://outlook.com
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -86,9 +91,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
