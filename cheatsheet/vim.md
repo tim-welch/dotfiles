@@ -1,6 +1,6 @@
 ## Cheatsheet: vim
 
-### Movement
+### Motion
 | key mapping | command          | description                                            |
 | ----------- | ---------------- | ------------------------------------------------------ |
 
@@ -17,9 +17,12 @@
 | ----------- | ---------------- | ------------------------------------------------------ |
 | <leader>tm  | :TableModeToggle | Table mode allows for nicely formatted markdown tables |
 
-### Wikis
+### Wikis [^vimwiki]
+[^vimwiki]: Wikis are powered by [VimWiki](https://github.com/vimwiki/vimwiki)
+
 | key mapping | command          | description                                            |
 | ----------- | ---------------- | ------------------------------------------------------ |
+| <leader>wt  |                  | Open wiki index                                        |
 | <leader>ws  | :VimwikiUISelect | List wikis and select one to enter                     |
 
 

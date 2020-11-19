@@ -1,0 +1,10 @@
+#!/bin/sh
+
+file=$(readlink -f "$1")
+dir=${file%/*}
+base="${file%.*}"
+ext="${file##*.}"
+
+build "$file"
+zathura "$base".pdf &
+ls "$file" | entr build /_ &

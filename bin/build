@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Based on Luke Smith's compiler script
+# See: https://github.com/LukeSmithxyz/voidrice
+
+file=$(readlink -f "$1")
+dir=${file%/*}
+base="${file%.*}"
+ext="${file##*.}"
+
+cd "$dir" || exit 1
+
+case "$ext" in
+    md) pandoc "$file" -o "$base".pdf ;;
+esac
+
+
