@@ -30,5 +30,8 @@ shopt -s progcomp_alias # Allow programmable completion through aliases
 for f in "$ALIAS_USER_DIR"/*; do source "$f"; done
 for f in "$ALIAS_USER_LOCAL_DIR"/*; do source "$f"; done
 
+# Completions
+for f in "$BASH_COMPLETION_USER_DIR"/*; do source "$f"; done
+
 # Prompt
 source "$XDG_CONFIG_HOME/bash/prompt"
