@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # Based on Luke Smith's compiler script
 # See: https://github.com/LukeSmithxyz/voidrice
+
+# set -x # echo commands
 
 file=$(readlink -f "$1")
 dir=${file%/*}
@@ -11,7 +13,10 @@ ext="${file##*.}"
 cd "$dir" || exit 1
 
 case "$ext" in
-    md) pandoc "$file" -o "$base".pdf ;;
+    md) 
+        [ -f $base.yaml ] && yaml=$base.yaml
+        pandoc --from markdown+footnotes+yaml_metadata_block $yaml $file -o "$base".pdf 
+        ;;
 esac
 
 
