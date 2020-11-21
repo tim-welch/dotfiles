@@ -40,8 +40,9 @@ map <C-A> :pyf ~/.local/share/clang/clang-format.py<cr>
 imap <C-A> <c-o>:pyf ~/.local/share/clang/clang-format.py<cr>
 
 " Open files in current window
-nnoremap <silent> <Leader>e :Files<cr>
-nnoremap <silent> <C-p> :Files<cr>
+nnoremap <silent> <Leader>E :Files<cr>
+nnoremap <silent> <Leader>e :GFiles<cr>
+nnoremap <Leader><Enter> :Buffers<CR>
 
 " Open files in horizontal split
 nnoremap <silent> <Leader>w :call fzf#run({
@@ -53,25 +54,6 @@ nnoremap <silent> <Leader>v :call fzf#run({
 \   'right': winwidth('.') / 2,
 \   'sink':  'vertical botright split' })<CR>
 
-" List open buffers
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-nnoremap <silent> <Leader><Enter> :call fzf#run({
-\   'source':  reverse(<sid>buflist()),
-\   'sink':    function('<sid>bufopen'),
-\   'options': '+m',
-\   'down':    len(<sid>buflist()) + 2
-\ })<CR>
-"
 " Manage todo lists
 nnoremap <F9> :e ~/todo/todo.md<CR>
 nnoremap <S-F9> :call win_gotoid(bufwinid('todo.md'))<CR>

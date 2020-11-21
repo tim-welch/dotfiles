@@ -19,3 +19,12 @@
 [submodule ".config/nvim/pack/default/start/vim-table-mode"]
 	path = .config/nvim/pack/default/start/vim-table-mode
 	url = https://github.com/tim-welch/vim-table-mode
+[submodule "cheatsheet/.config/nvim/pack/default/start/vim-surround"]
+	path = cheatsheet/.config/nvim/pack/default/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "/home/twelch/.config/nvim/pack/default/start/vim-surround"]
+	path = /home/twelch/.config/nvim/pack/default/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "/home/twelch/.config/nvim/pack/default/start/vim-repeat"]
+	path = /home/twelch/.config/nvim/pack/default/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
