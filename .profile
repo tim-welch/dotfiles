@@ -43,6 +43,9 @@ MANPATH="$MANPATH:/usr/local/texlive/2020/texmf-dist/doc/man"
 INFOPATH="$INFOPATH:/usr/local/texlive/2020/texmf-dist/doc/info"
 
 # Make sure user bin directories are at the beginning of PATH
+PATH="/bin:${PATH#*/bin}"
+PATH="/usr/bin:${PATH#*/usr/bin}"
+PATH="/usr/local/bin:${PATH#*/usr/local/bin}"
 PATH="$HOME/bin:${PATH#*$HOME/bin}" # Remove $HOME/bin and add it to the front of PATH
 PATH="$HOME/.local/bin:${PATH#*$HOME/.local/bin}" # Remove $HOME/.local/bin and add it to the front of PATH
 export PATH
