@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#! /bin/sh -e
 
 # Based on Luke Smith's compiler script
 # See: https://github.com/LukeSmithxyz/voidrice

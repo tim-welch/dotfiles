@@ -1,6 +1,6 @@
-#! /usr/bin/bash -e
+#! /bin/sh -e
 
-[[ -f ~/.cache/emoji-test.txt ]] || curl -o ~/.cache/emoji-test.txt https://unicode.org/Public/emoji/13.0/emoji-test.txt
+[ -f ~/.cache/emoji-test.txt ] || curl --output ~/.cache/emoji-test.txt https://unicode.org/Public/emoji/13.0/emoji-test.txt
 
 less ~/.cache/emoji-test.txt
 

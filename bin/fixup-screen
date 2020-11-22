@@ -1,3 +1,5 @@
+#! /bin/sh -e
+
 if [ $(echo $DESKTOP_STARTUP_ID | grep i3) ]; then
 	xrandr --output HDMI-2 --mode "1920x1080"
 
