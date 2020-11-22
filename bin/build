@@ -15,7 +15,7 @@ cd "$dir" || exit 1
 case "$ext" in
     md) 
         [ -f $base.yaml ] && yaml=$base.yaml
-        pandoc --from markdown+footnotes+yaml_metadata_block $yaml $file -o "$base".pdf 
+        pandoc --from markdown+footnotes+yaml_metadata_block+table_captions $yaml $file -o "$base".pdf 
         ;;
 esac
 
