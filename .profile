@@ -31,7 +31,7 @@ SAVEHIST=1000
 HISTCONTROL=ignoreboth # don't save duplicates or commands starting with space
 
 # Default applications
-export EDITOR=nvim
+export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export TERMINAL=terminator
