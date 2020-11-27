@@ -95,20 +95,26 @@
 
 :Coding
 
-| key mapping          | command          | description                                                               |
-| -------------------- | ---------------- | ------------------------------------------------------------------------- |
-| `Ctrl-]`             |                  | Jump to tag under cursor                                                  |
-| `gcc`                | :CommentaryLine  | Toggle comment current line                                               |
-| `gc<motion>`         | :Commentary      | Toggle comment lines based on motion                                      |
-| `gc`                 | :Commentary      | Toggle comment highlighted lines                                          |
-|                      | :Tags            | List tags in the project                                                  |
-|                      | :BTags           | List tags in the current buffer                                           |
-|                      | :Commits         | List git[^fugitive] commits                                               |
-|                      | :BCommits        | List commits for current buffer                                           |
-|                      | :Snippets        | List snippets[^UltiSnips]                                                 |
-| `ysiw)`              |                  | Surround[^surround] the inner word (iw) with )                            |
-| `ysW)`               |                  | Surround to end of WORD                                                   |
-| `cs"'`               |                  | Changing the text surrounded by " with '                                  |
+| key mapping          | command                 | description                                                        |
+| -------------------- | ----------------        | ------------------------------------------------------------------ |
+| `Ctrl-]`             |                         | Jump to tag under cursor                                           |
+| `gcc`                | :CommentaryLine         | Toggle comment current line                                        |
+| `gc<motion>`         | :Commentary             | Toggle comment lines based on motion                               |
+| `gc`                 | :Commentary             | Toggle comment highlighted lines                                   |
+|                      | :Tags                   | List tags in the project                                           |
+|                      | :BTags                  | List tags in the current buffer                                    |
+|                      | :Commits                | List git[^fugitive] commits                                        |
+|                      | :BCommits               | List commits for current buffer                                    |
+|                      | :Snippets               | List snippets[^UltiSnips]                                          |
+| `ysiw)`              |                         | Surround[^surround] the inner word (iw) with )                     |
+| `ysW)`               |                         | Surround to end of WORD                                            |
+| `cs"'`               |                         | Changing the text surrounded by " with '                           |
+|                      | :set makeprg=./build.sh | Set the make script to build.sh in the current directory           |
+|                      | :make                   | Build the current project                                          |
+|                      | :cn                     | Move to next build message                                         |
+|                      | :cp                     | Move to previous build message                                     |
+|                      | :cc                     | Move to first build message                                        |
+
 
 :Wikis[^vimwiki]
 
