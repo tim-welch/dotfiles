@@ -48,3 +48,7 @@ Downloads/
 .config/htop/
 .mozilla/
 .pki/
+.config/GIMP/
+.config/gtk-2.0/
+.config/nautilus/
+
