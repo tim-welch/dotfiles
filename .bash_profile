@@ -8,5 +8,9 @@ export BASH_COMPLETION_USER_DIR="$XDG_DATA_HOME"/bash/completions
 # Completions
 [ -f /usr/share/bash-completion/bash-completion ] && source /usr/share/bash-completion/bash-completion
 
+# Configure nix
+[ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && . $HOME/.nix-profile/etc/profile.d/nix.sh
+
 # Run bashrc
 [ -f ~/.bashrc ] && source ~/.bashrc
+
