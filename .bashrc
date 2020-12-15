@@ -24,7 +24,7 @@ shopt -s globstar   # Enable ** in pathnames
 shopt -s histappend   # Append to HISTFILE rather than overwrite
 shopt -s histverify   # Don't automattically execute history substitution
 shopt -s nocaseglob   # Ignore case when performing pathname expansion
-shopt -s progcomp_alias # Allow programmable completion through aliases
+#shopt -s progcomp_alias # Allow programmable completion through aliases
 
 # Aliases
 for f in "$ALIAS_USER_DIR"/*; do source "$f"; done
