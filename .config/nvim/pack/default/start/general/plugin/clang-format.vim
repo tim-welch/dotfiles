@@ -6,6 +6,6 @@
 " function to format the file
 function! FormatCppFile()
     let l:formatdiff = 1
-    pyf ~/.local/share/clang/clang-format.py
+    py3f ~/.local/share/clang/clang-format.py
 endfunction
 autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.cxx call FormatCppFile()
