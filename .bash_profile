@@ -14,3 +14,4 @@ export BASH_COMPLETION_USER_DIR="$XDG_DATA_HOME"/bash/completions
 # Run bashrc
 [ -f ~/.bashrc ] && source ~/.bashrc
 
+if [ -e /build/.nix-profile/etc/profile.d/nix.sh ]; then . /build/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
