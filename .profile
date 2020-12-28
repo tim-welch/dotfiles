@@ -37,6 +37,9 @@ export VISUAL=$EDITOR
 export TERMINAL=terminator
 export BROWSER=brave-browser
 
+# Configure ttdl (todo.txt)
+export TTDL_FILENAME=/mnt/c/Users/timot/Dropbox/slip-box/Tasks/todo.md
+
 # Configure TeX Live
 PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-linux"
 MANPATH="$MANPATH:/usr/local/texlive/2020/texmf-dist/doc/man"
@@ -46,6 +49,7 @@ INFOPATH="$INFOPATH:/usr/local/texlive/2020/texmf-dist/doc/info"
 PATH="/bin:${PATH#*/bin}"
 PATH="/usr/bin:${PATH#*/usr/bin}"
 PATH="/usr/local/bin:${PATH#*/usr/local/bin}"
+PATH="$HOME/.cargo/bin:${PATH#*$HOME/.cargo/bin}"
 PATH="$HOME/bin:${PATH#*$HOME/bin}" # Remove $HOME/bin and add it to the front of PATH
 PATH="$HOME/.local/bin:${PATH#*$HOME/.local/bin}" # Remove $HOME/.local/bin and add it to the front of PATH
 export PATH
