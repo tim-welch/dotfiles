@@ -1,0 +1,10 @@
+#! /usr/bin/sh
+
+if [ $# -eq 1 -a "$1" = "edit" ]
+then
+    vim $TTDL_FILENAME
+else
+    ttdl $@
+fi
+
+

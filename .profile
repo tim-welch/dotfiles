@@ -38,7 +38,7 @@ export TERMINAL=terminator
 export BROWSER=brave-browser
 
 # Configure ttdl (todo.txt)
-export TTDL_FILENAME=/mnt/c/Users/timot/Dropbox/slip-box/Tasks/todo.md
+export TTDL_FILENAME=/mnt/c/Users/timot/Dropbox/todo/todo.txt
 
 # Configure TeX Live
 PATH="$PATH:/usr/local/texlive/2020/bin/x86_64-linux"

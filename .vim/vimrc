@@ -1,3 +1,7 @@
+" Use VIM defaults
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
 " Use XDG data directory
 set undodir=$XDG_DATA_HOME/vim/undo
 set directory=$XDG_DATA_HOME/vim/swap
@@ -12,3 +16,5 @@ set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
 "nnoremap <M-h> :vertical resize -2<CR>
 "nnoremap <M-l> :vertical resize +2<CR>
 
+" Fix problem with VIM starting in replace mode in WSL
+nnoremap <esc>^[ <esc>^[
