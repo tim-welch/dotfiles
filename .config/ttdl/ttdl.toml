@@ -39,7 +39,7 @@ threshold = "red"
 # todos with highest priority (A)
 top = "bright red"
 # important todos - with a priority equal to or higher than `ranges.important`
-important = "white"
+important = "bright yellow"
 # done todos
 done = "bright black"
 # todos that are due today
@@ -57,7 +57,7 @@ soon = 4
 #   in `colors.important` font color.
 # Priority is a character from 'a'(highest priority) through 'z'. Setting
 #   `important` to any other value disables the feature
-important = ""
+important = "c"
 # creation date of todos that are older than `old` is displayed in `old` color.
 # Format: single digit and modifier 'd'(day), 'w'(week), 'm'(month), 'y'(year)
 old = "1y"
