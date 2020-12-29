@@ -70,3 +70,7 @@ rpmbuild/
 tmux-client-20371.log
 tmux-server-20373.log
 
+# WSL temp file
+.landscape/
+.motd_shown
+.sudo_as_admin_successful
