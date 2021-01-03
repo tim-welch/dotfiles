@@ -1,11 +1,40 @@
 #! /usr/bin/sh
 
+dinput() {
+    dmenu -p "Task:" <&-
+}
+
+dselect() {
+    todo | dmenu -i -l 25
+}
+
 if [ $# -eq 0 ]
 then
     ttdl --due=none..tomorrow --sort=due,pri,proj
-elif [ $# -eq 1 -a "$1" = "edit" ]
+elif [ $# -eq 1 ]
 then
-    vim $TTDL_FILENAME
+    if [ "$1" = "edit" ]
+    then
+        vim $TTDL_FILENAME
+    elif [ "$1" = "done" ]
+    then
+        echo "Please provide task ids to mark done"
+    elif [ "$1" = "iadd" ]
+    then
+        task=$(dinput)
+        if [ $? -eq 0 ]
+        then
+            ttdl add "$task"
+        fi
+    elif [ "$1" = "idone" ]
+    then
+        task=$(dselect)
+        if [ $? -eq 0 ]
+        then
+            task=$(echo $task | awk '{ print $1 }')
+            ttdl done $task
+        fi
+    fi
 else
     ttdl "$@"
 fi
