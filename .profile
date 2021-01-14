@@ -59,3 +59,4 @@ PATH="$HOME/.cargo/bin:${PATH#*$HOME/.cargo/bin}"
 PATH="$HOME/bin:${PATH#*$HOME/bin}" # Remove $HOME/bin and add it to the front of PATH
 PATH="$HOME/.local/bin:${PATH#*$HOME/.local/bin}" # Remove $HOME/.local/bin and add it to the front of PATH
 export PATH
+source "/home/twelch/.local/share/cargo/env"

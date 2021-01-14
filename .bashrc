@@ -35,3 +35,4 @@ for f in "$BASH_COMPLETION_USER_DIR"/*; do source "$f"; done
 
 # Prompt
 source "$XDG_CONFIG_HOME/bash/prompt"
+source "/home/twelch/.local/share/cargo/env"
