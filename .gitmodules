@@ -31,3 +31,6 @@
 [submodule ".config/nvim/pack/default/start/coc.nvim"]
 	path = .config/nvim/pack/default/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
+[submodule ".config/nvim/pack/default/start/lightline.vim"]
+	path = .config/nvim/pack/default/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
