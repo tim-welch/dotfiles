@@ -34,7 +34,7 @@ HISTCONTROL=ignoreboth # don't save duplicates or commands starting with space
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export VISUAL=$EDITOR
-export TERMINAL=terminator
+export TERMINAL=alacritty
 export BROWSER=brave-browser
 
 # Configure ttdl (todo.txt)

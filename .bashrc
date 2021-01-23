@@ -26,6 +26,8 @@ shopt -s histverify   # Don't automattically execute history substitution
 shopt -s nocaseglob   # Ignore case when performing pathname expansion
 #shopt -s progcomp_alias # Allow programmable completion through aliases
 
+[ "$TERM" = "alacritty" ] && export TERM=xterm-256color
+
 # Aliases
 for f in "$ALIAS_USER_DIR"/*; do source "$f"; done
 for f in "$ALIAS_USER_LOCAL_DIR"/*; do source "$f"; done
