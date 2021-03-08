@@ -38,11 +38,14 @@ export TERMINAL=alacritty
 export BROWSER=brave-browser
 
 # Configure ttdl (todo.txt)
-$HOME/.dropbox-dist/dropboxd &
 if [ -f /mnt/c/Users/timot/Dropbox/todo/todo.txt ]
 then
     export TTDL_FILENAME=/mnt/c/Users/timot/Dropbox/todo/todo.txt
+elif [ -f "/mnt/c/Users/Tim Welch/Dropbox/todo/todo.txt" ]
+then
+    export TTDL_FILENAME="/mnt/c/Users/Tim Welch/Dropbox/todo/todo.txt"
 else
+    $HOME/.dropbox-dist/dropboxd &
     export TTDL_FILENAME=$HOME/Dropbox/todo/todo.txt
 fi
 
@@ -60,3 +63,7 @@ PATH="$HOME/bin:${PATH#*$HOME/bin}" # Remove $HOME/bin and add it to the front o
 PATH="$HOME/.local/bin:${PATH#*$HOME/.local/bin}" # Remove $HOME/.local/bin and add it to the front of PATH
 export PATH
 source "/home/twelch/.local/share/cargo/env"
+
+# Register my SSH id
+keychain --nogui --quiet $HOME/.ssh/id_rsa
+source $HOME/.keychain/$(hostname)-sh
