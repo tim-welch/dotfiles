@@ -5,7 +5,7 @@ dinput() {
 }
 
 dselect() {
-    todo | dmenu -i -l 25
+    todo | fzf
 }
 
 if [ $# -eq 0 ]
@@ -15,18 +15,8 @@ elif [ $# -eq 1 ]
 then
     if [ "$1" = "edit" ]
     then
-        vim $TTDL_FILENAME
+        vim -X "$TTDL_FILENAME"
     elif [ "$1" = "done" ]
-    then
-        echo "Please provide task ids to mark done"
-    elif [ "$1" = "iadd" ]
-    then
-        task=$(dinput)
-        if [ $? -eq 0 ]
-        then
-            ttdl add "$task"
-        fi
-    elif [ "$1" = "idone" ]
     then
         task=$(dselect)
         if [ $? -eq 0 ]
@@ -34,6 +24,16 @@ then
             task=$(echo $task | awk '{ print $1 }')
             ttdl done $task
         fi
+    elif [ "$1" = "iadd" ]
+    then
+        task=$(dinput)
+        if [ $? -eq 0 ]
+        then
+            ttdl add "$task"
+        fi
+    elif [ "$1" = "+work" ]
+    then
+        ttdl "$1"
     fi
 else
     ttdl "$@"
